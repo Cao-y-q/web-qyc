@@ -1,0 +1,82 @@
+/* 全局初始化：清除默认内外边距，统一盒模型 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面主体样式：让卡片水平+垂直居中 */
+body {
+    /* 占满浏览器可视高度 */
+    min-height: 100vh;
+    /* 浅灰背景，衬托白色卡片 */
+    background-color: #f0f2f5;
+    /* flex布局居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "微软雅黑", sans-serif;
+}
+
+/* 名片卡片核心样式 */
+.card {
+    width: 340px;
+    padding: 35px 25px;
+    background-color: #ffffff;
+    /* 要求：12px圆角 */
+    border-radius: 12px;
+    /* 柔和阴影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    /* 过渡动画，给hover上浮效果使用 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 鼠标悬停：卡片轻微上浮，阴影加深 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.11);
+}
+
+/* 圆形头像 */
+.avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 18px;
+    /* 圆形 */
+    border-radius: 50%;
+    background-color: #64a6e8;
+    /* 如需使用图片头像，取消下面两行注释 */
+    /* background-image: url("avatar.jpg"); */
+    /* background-size: cover; */
+}
+
+/* 姓名样式 */
+.user-name {
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+/* 职位文本 */
+.user-job {
+    font-size: 16px;
+    color: #606060;
+    margin-bottom: 22px;
+}
+
+/* 分割线 */
+.divider {
+    width: 90px;
+    height: 1px;
+    border: none;
+    background-color: #dddddd;
+    margin: 0 auto 22px;
+}
+
+/* 联系方式 */
+.contact-info p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.9;
+}
